@@ -1,0 +1,24 @@
+kvm:
+  vms:
+    - vm_name: client
+      master_image: debian-testing-amd64.qcow2 # master image to be used
+      force_copy: false # force copy the master image to the VM image
+      memory: 2048
+      tapnum: 553
+      devices:
+        storage:
+          - dev_name: client-disk.qcow2
+            type: disk
+            size: 32G # size of the disk
+            bus: scsi # bus type
+    - vm_name: server
+      master_image: debian-testing-amd64.qcow2 # master image to be used
+      force_copy: false # force copy the master image to the VM image
+      memory: 2048
+      tapnum: 554
+      devices:
+        storage:
+          - dev_name: server-disk.qcow2
+            type: disk
+            size: 32G # size of the disk
+            bus: scsi # bus type

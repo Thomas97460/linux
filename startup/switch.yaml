@@ -1,0 +1,12 @@
+ovs:
+  switches:
+    - name: dsw-host
+      ports:
+        - name: tap553
+          type: OVSPort
+          vlan_mode: access
+          tag: 115
+        - name: tap554
+          type: OVSPort
+          vlan_mode: access
+          tag: 115
